@@ -1,21 +1,10 @@
 # build image on top of node
-FROM debian
-
-# install environment dependencies
-RUN apt-get update -yqq \
-  && apt-get install -yqq --no-install-recommends apt-utils\
-    netcat \
-  && apt-get -q clean
-RUN apt-get install --fix-missing
-
-RUN apt-get -y install npm
-
-RUN  npm install -g gulp-cli
+FROM node:9
 
 RUN npm install
 
-RUN gulp sass
+EXPOSE 3000
 
-RUN npm start
+CMD ["npm", "run", "start"]
 
 
