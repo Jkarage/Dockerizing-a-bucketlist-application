@@ -1,6 +1,6 @@
 version: "3"
 services:
-  db:
+  postgresql:
     image: postgres
     networks:
       - webnet
@@ -9,14 +9,11 @@ services:
       APP_SECRET: iigMnxy7y7dFJppmd3JgZRzOUYLgmjaXX 
       REQUESTS_ORIGIN: "*"
       TEST_DATABASE_URL: postgresql://localhost/bucketlist_testdb
-
-     
   web:
     image: jkarage/dockerizingtest:test1
     ports:
       - "4000:80"
     networks:
-      - webnet
-      
+      - webnet   
 networks:
   webnet:
