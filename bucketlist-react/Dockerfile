@@ -6,6 +6,7 @@ RUN apt-get update -yqq \
   && apt-get install -yqq --no-install-recommends apt-utils\
     netcat \
   && apt-get -q clean
+RUN apt-get install --fix-missing
 
 RUN apt-get -y install npm
 
