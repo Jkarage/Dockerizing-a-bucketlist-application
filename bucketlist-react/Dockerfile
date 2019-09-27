@@ -1,5 +1,5 @@
 # build image on top of node
-FROM node
+FROM debian
 
 # install environment dependencies
 RUN apt-get update -yqq \
