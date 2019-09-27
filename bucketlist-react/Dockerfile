@@ -7,7 +7,7 @@ RUN apt-get update -yqq \
     netcat \
   && apt-get -q clean
 
-RUN apt-get install npm
+RUN apt-get -y install npm
 
 RUN  npm install -g gulp-cli
 
