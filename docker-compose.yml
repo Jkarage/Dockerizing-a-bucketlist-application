@@ -1,19 +1,33 @@
 version: "3"
+
 services:
   postgresql:
-    image: postgres
-    networks:
-      - webnet
-    environment: 
-      DATABASE_URL: postgresql://localhost/bucketlist_testdb
-      APP_SECRET: iigMnxy7y7dFJppmd3JgZRzOUYLgmjaXX 
-      REQUESTS_ORIGIN: "*"
-      TEST_DATABASE_URL: postgresql://localhost/bucketlist_testdb
-  web:
-    image: jkarage/dockerizingtest:test1
+    container_name: database_service
+    image: test-db
     ports:
-      - "4000:80"
-    networks:
-      - webnet   
-networks:
-  webnet:
+      - 5432:5432
+
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  react-frontend:
+    container_name: frontend_service
+    image: frontend
+    ports:
+      - 5000:5000
+
+  react-api:
+    container_name: api_service
+    image: bucketlist-api
+    ports:
+      - 3000:3000
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@database_service:5432/reactdb 
+      - TEST_DATABASE_URL=postgresql://postgres:postgres@database_service:5432/reactdb
+    
+    depends_on:
+      - postgresql
+
+         
+

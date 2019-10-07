@@ -4,7 +4,7 @@ FROM python:3.6
 # install environment dependencies
 RUN apt-get update -yqq \
   && apt-get install -yqq --no-install-recommends apt-utils\
-    netcat \
+   netcat \
   && apt-get -q clean
 
 # Creating a folder named /app
@@ -20,9 +20,6 @@ WORKDIR /app
 
 # installing API dependencies
 RUN pip install -r requirements.txt
-
-
-RUN nosetests --with-coverage --cover-package=bucketlist
 
 # making the script executable
 RUN chmod +x start_postgres.sh
