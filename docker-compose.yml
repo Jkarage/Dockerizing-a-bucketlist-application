@@ -3,7 +3,7 @@ version: "3"
 services:
   postgresql:
     container_name: database_service
-    image: test-db
+    image: databasetest
     ports:
       - 5432:5432
 
@@ -19,12 +19,14 @@ services:
 
   react-api:
     container_name: api_service
-    image: bucketlist-api
+    image: api-test
     ports:
       - 3000:3000
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@database_service:5432/reactdb 
-      - TEST_DATABASE_URL=postgresql://postgres:postgres@database_service:5432/reactdb
+      - DATABASE_URL=postgresql://postgres:postgres@database_service:5432/reactdb2 
+      - TEST_DATABASE_URL=postgresql://postgres:postgres@database_service:5432/reactdb2
+      - REQUESTS_ORIGIN="*"
+      - APP_SECRET=iigMnxy7y7dFJppmd3JgZRzOUYLgmjaXX
     
     depends_on:
       - postgresql
