@@ -2,6 +2,7 @@
   "name": "bucketlist",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://jkarage.github.io/myapp",
   "jest": {
     "collectCoverageFrom": [
       "!**/index.js",
