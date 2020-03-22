@@ -10,8 +10,17 @@ This app enables you to keep track of your goals. A bucketlist is a list of goal
 install docker on your machine and make sure its running 
 
 ## Installation
+Enter to the dockerfile directory
+"cd /bucketlist-react"
+
 build the bucketlist react docker image 
-- "docker build -t 
+- "docker build -t frontend ."
+
+Run the image 
+- "docker run frontend"
+
+You can now view bucketlist in the browser.
+-  http://172.17.0.2:3000/
 
 **Checkout the live app on heroku**
 
