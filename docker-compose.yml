@@ -3,7 +3,7 @@ version: "3"
 services:
   postgresql:
     container_name: database_service
-    image: databasetest
+    image: database
     ports:
       - 5432:5432
 
@@ -19,7 +19,7 @@ services:
 
   react-api:
     container_name: api_service
-    image: api-test
+    image: bucketlist_api
     ports:
       - 5000:5000
     environment:
