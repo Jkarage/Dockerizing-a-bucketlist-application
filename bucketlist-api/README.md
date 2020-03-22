@@ -8,7 +8,7 @@ This project is an API for a bucketlist app, that enables you to keep track of y
  build the image 
 - "docker build -t bucketlist_api ."
  
- running the image
+ running the image(_for this to run the database image must be running_)
  - "docker run bucketlist_api"
  
  Now you can view it on your browser 
