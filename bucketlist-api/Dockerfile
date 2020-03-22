@@ -13,7 +13,6 @@ RUN mkdir /app
 # copying all contents of the current folder where the Dockerfile resides to the folder /app
 COPY . /app
 
-
 # this is changing the current working directory to /app
 # since it has the requirement.txt file which contains the API dependencies
 WORKDIR /app
