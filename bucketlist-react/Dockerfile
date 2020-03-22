@@ -8,7 +8,6 @@ WORKDIR /home/download
 ARG NODEREPO="node_6.x"
 ARG DISTRO="jessie"
 # Only newest package kept in nodesource repo. Cannot pin to version using apt!
-# See https://github.com/nodesource/distributions/issues/33
 RUN curl -sSO https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 RUN apt-key add nodesource.gpg.key
 RUN echo "deb https://deb.nodesource.com/${NODEREPO} ${DISTRO} main" > /etc/apt/sources.list.d/nodesource.list
