@@ -11,7 +11,7 @@ install docker on your machine and make sure its running
 
 ## Installation
 Enter to the dockerfile directory
-"cd /bucketlist-react"
+- "cd /bucketlist-react"
 
 build the bucketlist react docker image 
 - "docker build -t frontend ."
@@ -26,8 +26,3 @@ You can now view bucketlist in the browser.
 
 https://bucketlist-john555.herokuapp.com
 
-**API**
-
-https://bucketlistapp-api.herokuapp.com/
-
-The API is written in python using the flask framework.
