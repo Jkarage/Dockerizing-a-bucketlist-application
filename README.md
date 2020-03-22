@@ -55,5 +55,4 @@ Build the image
  Now you can view it on your browser 
  http://[yourlocalhost]:5000
 
-## Documentation
 Documentation can be found at `/apidocs` when the app is running.
