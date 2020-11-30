@@ -1,7 +1,6 @@
-# work_sample_1
-Dockerizing a bucketlist application
+# Creating docker images for the bucketlist application
 ## setup
-install docker on your machine and make sure its running 
+Docker installation [Go to the Downloading Web Site](https://docs.docker.com/get-docker/) 
 
 ## Bucketlist app (With ReactJS)
 This app enables you to keep track of your goals. A bucketlist is a list of goals you wish to persue in the future, or just next week. Features include:
@@ -12,25 +11,18 @@ This app enables you to keep track of your goals. A bucketlist is a list of goal
 - Creating a user account, login and logout.
 
 ### Installation
-Enter to the dockerfile directory
+Entering to the directory where dockerfile is residing
 - "cd /bucketlist-react"
 
-build the bucketlist react docker image 
+build the bucketlist react docker image  naming the image frontend
 - "docker build -t frontend ."
 
 Run the image 
 - "docker run frontend"
 
-You can now view bucketlist in the browser.
--  http://[yourlocalhost]:3000/
-
-**Checkout the live app on heroku**
-
-https://bucketlist-john555.herokuapp.com
-
 # Database image to work with api 
 ## Installation
-Enter to the dockerfile directory
+Entering to the directory where dockerfile is residing
 - "cd /database"
 
 Build the database image
@@ -39,11 +31,10 @@ Build the database image
 run the database image
 - "docker run database"
 
-# Bucketlist API
+# Bucketlist API image creation
 This project is an API for a bucketlist app, that enables you to keep track of your goals or dreams.
 
-## How to run the app
-Enter to the dockerfile directory
+Entering to the directory where dockerfile is residing
 - "cd /bucketlist-api"
 
 Build the image 
@@ -51,8 +42,6 @@ Build the image
  
  running the image(_for this to run the database image must be running_)
  - "docker run bucketlist_api"
- 
- Now you can view it on your browser 
- http://[yourlocalhost]:5000
+
 
 Documentation can be found at `/apidocs` when the app is running.
