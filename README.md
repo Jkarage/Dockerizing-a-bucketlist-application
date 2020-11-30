@@ -10,38 +10,46 @@ This app enables you to keep track of your goals. A bucketlist is a list of goal
 - Editing and deleting goals.
 - Creating a user account, login and logout.
 
-### Installation
-Entering to the directory where dockerfile is residing
-- "cd /bucketlist-react"
+### Creating the frontend image
+Entering to the directory where dockerfile is residing <br>
 
-build the bucketlist react docker image  naming the image frontend
-- "docker build -t frontend ."
+   *cd /bucketlist-react*
 
-Run the image 
-- "docker run frontend"
+build the bucketlist react docker image  naming the image frontend <br>
 
-# Database image to work with api 
-## Installation
-Entering to the directory where dockerfile is residing
-- "cd /database"
+   *docker build -t frontend .*
 
-Build the database image
-- "docker build -t database ."
+Run the image <br>  
 
-run the database image
-- "docker run database"
+   *docker run frontend*
+ 
+### Creating the database image
+Entering to the directory where dockerfile is residing <br>
 
-# Bucketlist API image creation
+   *cd /database*
+
+Build the database image <br>
+
+   *docker build -t database .*
+
+run the database image <br>
+
+   *docker run database*
+
+### Creating the api image
 This project is an API for a bucketlist app, that enables you to keep track of your goals or dreams.
 
-Entering to the directory where dockerfile is residing
-- "cd /bucketlist-api"
+Entering to the directory where dockerfile is residing<br>
 
-Build the image 
-- "docker build -t bucketlist_api ."
+   *cd /bucketlist-api*
+
+Build the image <br>
+
+   *docker build -t bucketlist_api .*
  
- running the image(_for this to run the database image must be running_)
- - "docker run bucketlist_api"
+ running the image(_for this to run the database image must be running_) <br>
+ 
+   *docker run bucketlist_api*
 
 
 Documentation can be found at `/apidocs` when the app is running.
